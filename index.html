@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jqtouch/jqtouch.css">
+    <link rel="stylesheet" href="jqtouch/jqt/theme.css">
+    <script src="jqtouch/jquery.js"></script>
+    <script src="jqtouch/jqtouch.js"></script>
+    <script>
+        var jQT = $.jQTouch({
+            icon: 'kilo.png'
+        });
+    </script>
+    <title>Kilo</title>
+</head>
+    <body>
+        <div id="home">
+            <div class="toolbar">
+                <h1>Kilo</h1>
+                <a href="#settings" class="button flip">Configurações</a>
+            </div>
+            <ul class="edgetoedge">
+                <li class="arrow"><a href="#dates">Datas</a></li>
+                <li class="arrow"><a href="#about">Sobre</a></li>
+            </ul>
+        </div>
+        <div id="about">
+            <div class="toolbar">
+                <h1>Sobre</h1>
+                <a href="#" class="button back">Voltar</a>
+            </div>
+            <div>
+                <p>Kilo dá a você uma maneira fácil de descobrir quais os alimentos necessários para uma dieta balanceada.</p>
+            </div>
+        </div>
+        <div id="dates">
+            <div class="toolbar">
+                <h1>Datas</h1>
+                <a href="#" class="button back">Voltar</a>
+            </div>
+            <ul class="edgetoedge">
+                <li class="arrow"><a href="#date" id="1">Hoje</a></li>
+                <li class="arrow"><a href="#date" id="2">Ontem</a></li>
+                <li class="arrow"><a href="#date" id="3">2 Dias atrás</a></li>
+                <li class="arrow"><a href="#date" id="4">3 Dias atrás</a></li>
+                <li class="arrow"><a href="#date" id="5">4 Dias atrás</a></li>
+                <li class="arrow"><a href="#date" id="6">5 Dias atrás</a></li>
+            </ul>
+        </div>
+        <div id="date">
+            <div class="toolbar">
+                <h1>Data</h1>
+                <a href="#" class="back button">Voltar</a>
+                <a href="#createEntry" class="button slideup">+</a>
+            </div>
+            <ul class="edgetoedge">
+                <li id="entryTemplate" class="entry" style="display: none">
+                    <span class="label">Nome</span>
+                    <span class="calories">000</span>
+                    <span class="delete">Apagar</span>
+                </li>
+            </ul>
+        </div>
+        <div id="createEntry">
+            <div class="toolbar">
+                <h1>Novo Cadastro</h1>
+                <a href="#" class="button cancel">Cancelar</a>
+            </div>
+            <form method="post">
+                <ul class="rounded">
+                    <li><input type="text" placeholder="Alimento" name="food" id="food" autocapitalize="off" autocorrect="off" autocomplete="off"></li>
+                    <li><input type="text" placeholder="Calorias" name="calories" id="calories" autocapitalize="off" autocorrect="off" autocomplete="off"></li>
+                    <li><input type="submit" class="submit" name="action" value="Incluir Alimento"></li>
+                </ul>
+            </form>
+        </div>
+        <div id="settings">
+            <div class="toolbar">
+                <h1>Configurações</h1>
+                <a href="#" class="button cancel">Cancelar</a>
+            </div>
+            <form method="post">
+                <ul class="rounded">
+                    <li><input type="text" placeholder="Idade" name="age" id="age"></li>
+                    <li><input type="text" placeholder="Peso" name="weight" id="weight"></li>
+                    <li><input type="text" placeholder="Objetivo" name="budget" id="budget"></li>
+                    <li><input type="submit" class="submit" name="action" value="Salvar Configurações"></li>
+                </ul>
+            </form>
+        </div>
+    </body>
+</html>
